@@ -1,21 +1,11 @@
-$(function (){
-    setTimeout('circle()');
-});
-
-function circle() {
-    $('.circle-outer').animate({
-        marginTop: '-=5px'
-    }, 3000).animate({
-        marginTop: '+=5px'
-    }, 3000);
-    setTimeout('circle()', 6000);
-}
-
+//ルート設定
 const root = document.documentElement;
 
+//初期位置
 let xPosition = 45;
 let yPosition = 45;
 
+//初期加算値
 let xDirection = 0.01;
 let yDirection = 0.01;
 

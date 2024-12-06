@@ -3,7 +3,7 @@
 }
 
 %circle-margin{
-    margin-left: 30px;
+    margin-left: 100px;
 }
 
 :root {
@@ -31,12 +31,13 @@
     .wrapper {
         width: 1000px;
         height: 1000px;
-        padding: 20px, 20px, 20px, 20px;
     }
 }
 
 .circle-list1{
     display: flex;
+    padding-left: 50px;
+    padding-top: 50px;
 }
 
 .circle-outer {
