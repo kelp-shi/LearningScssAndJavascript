@@ -14,10 +14,10 @@
 %bg-gradation2 {
     background: radial-gradient(
         circle at var(--x-position) var(--y-position),
-        rgb(255, 255, 255) 2%,
-        rgb(103, 17, 157) 50%,
-        rgb(86, 4, 138) 55%,
-        black 75%
+        rgba(255, 255, 255, 0.8) 2%,
+        rgba(103, 17, 157, 0.8) 50%,
+        rgba(86, 4, 138, 0.8) 55%,
+        rgba(0, 0, 0, 0.8)
         );
     transition: 50;
 }

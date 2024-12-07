@@ -13,20 +13,20 @@ function changeGradation() {
     //X軸ポジション
     xPosition += xDirection
     //default:55
-    if (xPosition >= 55 ){
+    if (xPosition >= 60 ){
         xDirection = -0.01;
     //default:45
-    } else if (xPosition <= 45){
+    } else if (xPosition <= 40){
         xDirection = 0.01;
     }
 
     //Y軸ポジション
     yPosition += yDirection
     //default:50
-    if (yPosition >= 50) {
+    if (yPosition >= 55) {
         yDirection = -0.01;
     //default:40
-    } else if (yPosition <= 40){
+    } else if (yPosition <= 35){
         yDirection = 0.01;
     }
 
