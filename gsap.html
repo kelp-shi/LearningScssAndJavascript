@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Line Animation with Span</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    span#line {
+      display: inline-block;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: 0;
+      height: 2px;
+      background-color: black;
+    }
+    span#line2 {
+      display: inline-block;
+      position: absolute;
+      top: 50px;
+      left: 150px;
+      width: 2px;
+      height: 0;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <span id="line"></span>
+  <span id="line2"></span>
+  <script>
+    // Animate the line to extend horizontally
+    gsap.to("#line", {
+      width: "100px", // Length of the line
+      duration: 1 // Duration in seconds
+    });
+    gsap.to("#line2", {
+      height: "100px", // Length of the line
+      duration: 1, // Duration in seconds
+      delay: 1
+    });
+  </script>
+</body>
+</html>
