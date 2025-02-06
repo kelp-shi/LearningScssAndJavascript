@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG to Transparent PNG</title>
+</head>
+<body>
+    <!-- 出力するSVGを入力 -->
+
+    <!-- SVGエリアエンド -->
+
+
+    <button id="downloadPNG">Download PNG</button>
+
+<script>
+document.getElementById('downloadPNG').addEventListener('click', () => {
+    const svgElement = document.getElementById('mySVG');
+    const svgData = new XMLSerializer().serializeToString(svgElement);
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+
+    // 高解像度設定
+    const width = 1920; // ダウンロード時の幅
+    const height = 383.49; // ダウンロード時の高さ
+    canvas.width = width;
+    canvas.height = height;
+
+    const img = new Image();
+
+    img.src = 'data:image/svg+xml;charset=utf-8;base64,' + btoa(unescape(encodeURIComponent(svgData))); 
+
+    img.onload = function () {
+        context.drawImage(img, 0, 0, width, height);
+
+        const pngDataUrl = canvas.toDataURL('image/png');
+
+        const downloadLink = document.createElement('a');
+        downloadLink.href = pngDataUrl;
+        downloadLink.download = 'image.png';
+        downloadLink.click();
+    };
+});
+
+
+</script>
+</body>
+</html>
