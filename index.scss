@@ -1,57 +1,18 @@
-%bg-gradation {
-    background: radial-gradient(at 50% 30%, rgb(255, 255, 255), rgb(51, 0, 99) 60%, rgb(0, 0, 0) 80%);
-}
-
-%circle-margin{
-    margin-left: 100px;
-}
-
-:root {
-    --x-position: 45%;
-    --y-position: 45%;
-}
-
-%bg-gradation2 {
-    background: radial-gradient(
-        circle at var(--x-position) var(--y-position),
-        rgba(255, 255, 255, 0.8) 2%,
-        rgba(103, 17, 157, 0.8) 50%,
-        rgba(86, 4, 138, 0.8) 55%,
-        rgba(0, 0, 0, 0.8)
-        );
-    transition: 50;
-}
-
-%circle-radius {
-    border-radius: 50%;
-}
-
-.body {
+body {
     margin: 0;
-    .wrapper {
-        width: 1000px;
-        height: 1000px;
-    }
-}
-
-.circle-list1{
+    overflow: hidden;
     display: flex;
-    padding-left: 50px;
-    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
 }
 
-.circle-outer {
-    width: 170px;
-    height: 170px;
-    @extend %bg-gradation2;
-    @extend %circle-radius;
-    @extend %circle-margin;
+canvas {
+    border: 1px solid black;
+    cursor: grab;
 }
 
-.circle-outer2 {
-    width: 170px;
-    height: 170px;
-    @extend %bg-gradation2;
-    @extend %circle-radius;
-    @extend %circle-margin;
+canvas:active {
+    cursor: grabbing;
 }
